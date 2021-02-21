@@ -5,7 +5,7 @@ export const About = styled.section(
     padding: ${size(2)};
 
     ${media.tablet(css`
-      padding: ${size(10)} 0;
+      padding: ${size(5)} 0;
     `)}
 
     display: flex;
@@ -20,7 +20,7 @@ export const Blog = styled.section(
     padding: ${size(2)};
 
     ${media.tablet(css`
-      padding: ${size(10)} 0;
+      padding: ${size(5)} 0;
     `)}
 
     > h4 {
@@ -38,12 +38,35 @@ export const HomeContainer = styled.div(
     padding: ${size(2)} 0;
 
     ${media.tablet(css`
-      padding: ${size(10)} ${size(5)};
+      padding: ${size(5)};
     `)}
 
     ${media.desktop(css`
       max-width: 850px;
       margin: 0 auto;
     `)}
+  `
+)
+
+export const Project = styled.section(
+  ({ theme: { media, size } }) => css`
+    padding: ${size(2)};
+
+    ${media.tablet(css`
+      padding: ${size(5)} 0;
+    `)}
+
+    > h4 {
+      text-transform: uppercase;
+      letter-spacing: ${size(0.5)};
+      font-weight: 400;
+      margin-bottom: ${size(5)};
+    }
+
+    > div {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: ${size(2)};
+    }
   `
 )

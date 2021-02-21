@@ -2,21 +2,24 @@ import React from 'react'
 import { GetStaticProps } from 'next'
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry'
 
+import { getRepositories } from '@/services/api'
 import { getPostsForHome } from '@/services/posts'
 
-import { Post } from '@/types'
+import { Post, Repository } from '@/types'
 
-import { About, Blog, HomeContainer } from '@/styles/pages/Home'
+import { About, Blog, HomeContainer, Project } from '@/styles/pages/Home'
 
 import PostCard from '@/components/PostCard'
 import Template from '@/components/Template'
 import SEO from '@/components/SEO'
+import RepositoryCard from '@/components/RepositoryCard'
 
 interface HomeProps {
   posts: Post[]
+  repositories: Repository[]
 }
 
-export default function Films({ posts }: HomeProps) {
+export default function Films({ posts, repositories }: HomeProps) {
   return (
     <Template loading={posts.length === 0}>
       <SEO title="Home" shouldExcludeTitleSuffix />
@@ -54,6 +57,20 @@ export default function Films({ posts }: HomeProps) {
             </ResponsiveMasonry>
           )}
         </Blog>
+
+        <Project>
+          <h4>Útilmos Commits</h4>
+
+          {repositories.length === 0 ? (
+            <h3>Carregando...</h3>
+          ) : (
+            <div>
+              {repositories.map((repository: Repository) => (
+                <RepositoryCard key={repository.name} repository={repository} />
+              ))}
+            </div>
+          )}
+        </Project>
       </HomeContainer>
     </Template>
   )
@@ -61,9 +78,10 @@ export default function Films({ posts }: HomeProps) {
 
 export const getStaticProps: GetStaticProps<HomeProps> = async () => {
   const response = await getPostsForHome()
+  const repositories = await getRepositories()
 
   return {
-    props: { ...response },
+    props: { ...response, ...repositories },
     revalidate: 60
   }
 }
