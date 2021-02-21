@@ -1,119 +1,69 @@
-import React, { useCallback, useEffect, useMemo, useState } from 'react'
+import React from 'react'
+import { GetStaticProps } from 'next'
+import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry'
 
-import { useFilm } from '@/hooks/film'
+import { getPostsForHome } from '@/services/posts'
 
-import { FilmsContainer } from '@/styles/pages/Films'
+import { Post } from '@/types'
 
-import FilmCard from '@/components/FilmCard'
-import Paginate from '@/components/Paginate'
+import { About, Blog, HomeContainer } from '@/styles/pages/Home'
+
+import PostCard from '@/components/PostCard'
 import Template from '@/components/Template'
 import SEO from '@/components/SEO'
 
-interface Film {
-  id: number
-  title: string
-  overview: string
-  release_date: string
-  poster_path: string
+interface HomeProps {
+  posts: Post[]
 }
 
-export default function Films() {
-  const { films, loading, pages: apiTotalPage, getFilms } = useFilm()
-
-  const [page, setPage] = useState(1)
-
-  const [pages, setPages] = useState([])
-
-  const totalPage = useMemo(() => apiTotalPage, [apiTotalPage])
-  const buttons = useMemo(() => 5, [])
-
-  useEffect(() => {
-    const localStoragePage = parseInt(
-      localStorage.getItem('@Refactor:lastPage')
-    )
-
-    if (localStoragePage) {
-      setPage(localStoragePage)
-    }
-  }, [])
-
-  useEffect(() => {
-    let maximumLeft = page - Math.floor(buttons / 2)
-    let minimumRight = page + Math.floor(buttons / 2)
-
-    if (maximumLeft < 1) {
-      maximumLeft = 1
-      minimumRight = 5
-    }
-
-    if (minimumRight > totalPage) {
-      maximumLeft = totalPage - (buttons - 1)
-      minimumRight = totalPage
-
-      if (maximumLeft < 1) maximumLeft = 1
-    }
-
-    const totalPages = []
-
-    for (let page = maximumLeft; page <= minimumRight; page++) {
-      totalPages.push(page)
-    }
-
-    setPages(totalPages)
-  }, [page, totalPage])
-
-  useEffect(() => {
-    getFilms(page)
-
-    window.scrollTo(0, 0)
-  }, [page])
-
-  const goToPage = useCallback((page: number) => {
-    localStorage.setItem('@Refactor:lastPage', page.toString())
-
-    setPage(page)
-  }, [])
-
-  const nextPage = useCallback(() => {
-    const enable = page < totalPage - 1
-
-    if (enable) goToPage(page + 1)
-  }, [page, totalPage])
-
-  const previousPage = useCallback(() => {
-    const enable = page >= 1
-
-    if (enable) goToPage(page - 1)
-  }, [page, totalPage])
-
+export default function Films({ posts }: HomeProps) {
   return (
-    <Template loading={loading}>
-      <SEO title="Filmes" />
+    <Template loading={posts.length === 0}>
+      <SEO title="Home" shouldExcludeTitleSuffix />
 
-      <FilmsContainer>
-        <div>
-          <h2>Filmes</h2>
-          <p>Fique por dentro dos últimos filmes.</p>
-        </div>
+      <HomeContainer>
+        <About>
+          <p>
+            Oi, meu nome é Melquisedec, tenho 23 anos. Sou apaixonado por
+            tecnologia, jogos e música.
+          </p>
+          <br />
+          <p>
+            Atualmente trabalho como Front, mas vez ou outra atuo no Back
+            também. Gosto de aprender e ensinar (sempre que possível), buscando
+            sempre evoluir tanto tecnicamente quanto pessoalmente.
+          </p>
+          <br />
+          <p>
+            Uso a tecnologia para impactar a vida das pessoas de forma positiva.
+          </p>
+        </About>
 
-        <section>
-          {loading ? (
+        <Blog>
+          <h4>Útilmos Posts</h4>
+
+          {posts.length === 0 ? (
             <h3>Carregando...</h3>
           ) : (
-            films.map((film: Film) => <FilmCard key={film.id} film={film} />)
+            <ResponsiveMasonry columnsCountBreakPoints={{ 767: 2, 1023: 3 }}>
+              <Masonry gutter="18px">
+                {posts.map((post: Post) => (
+                  <PostCard key={post.slug} post={post} />
+                ))}
+              </Masonry>
+            </ResponsiveMasonry>
           )}
-        </section>
-
-        {!!pages.length && (
-          <Paginate
-            currentPage={page}
-            nextPage={nextPage}
-            pages={pages}
-            previousPage={previousPage}
-            setPage={goToPage}
-          />
-        )}
-      </FilmsContainer>
+        </Blog>
+      </HomeContainer>
     </Template>
   )
+}
+
+export const getStaticProps: GetStaticProps<HomeProps> = async () => {
+  const response = await getPostsForHome()
+
+  return {
+    props: { ...response },
+    revalidate: 60
+  }
 }

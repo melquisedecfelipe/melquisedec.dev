@@ -8,7 +8,7 @@ import SEO from '@/components/SEO'
 export default function NotFound() {
   return (
     <Template>
-      <SEO title="404" />
+      <SEO title="404" shouldExcludeTitleSuffix />
 
       <NotFoundContainer>
         <div>
