@@ -1,7 +1,8 @@
 import styled, { css } from 'styled-components'
 
 export const NotFoundContainer = styled.div(
-  ({ theme: { colors, media, size } }) => css`
+  ({ theme: { media, size } }) => css`
+    width: 100%;
     padding: ${size(2)};
 
     ${media.tablet(css`
@@ -9,8 +10,7 @@ export const NotFoundContainer = styled.div(
     `)}
 
     ${media.desktop(css`
-      max-width: 950px;
-      width: 100%;
+      max-width: 850px;
       margin: 0 auto;
     `)}
 
@@ -18,12 +18,7 @@ export const NotFoundContainer = styled.div(
       padding: ${size(4)} 0;
 
       > h2 {
-        color: ${colors.primary};
         font-weight: 700;
-      }
-
-      > p {
-        color: ${colors.primary};
       }
     }
   `

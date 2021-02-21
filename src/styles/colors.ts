@@ -1,22 +1,22 @@
+const white = '#fff'
+const black = '#1f1f1f'
+
 const wheel = {
-  green: '#05c46b',
-  greenSecondary: '#0be881',
-  red: '#ff3f34',
-  redSecondary: '#ff5e57',
-  yellow: '#ffd32a',
-  yellowSecondary: '#ffdd59',
-  gray: '#f6f6f6',
-  black: '#111'
+  title: '#2f3542',
+  text: '#57606f',
+  link: '#3742fa',
+  gray: '#f1f2f6',
+  green: '#2ed573'
 }
 
-const primary = '#000'
-const secondary = '#fff'
-
-const error = ''
+const code = {
+  background: '#282a36',
+  text: '#f8f8f2'
+}
 
 export default {
+  black,
+  code,
   wheel,
-  primary,
-  secondary,
-  error
+  white
 }
