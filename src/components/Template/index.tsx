@@ -25,7 +25,7 @@ interface TemplateProps {
 }
 
 const Template: React.FC<TemplateProps> = ({
-  image = '/static/background1.jpg',
+  image = '/static/background.jpg',
   loading,
   post,
   children
@@ -54,11 +54,6 @@ const Template: React.FC<TemplateProps> = ({
             <li>
               <NextLink href="/about">
                 <a>Sobre</a>
-              </NextLink>
-            </li>
-            <li>
-              <NextLink href="/posts">
-                <a>Blog</a>
               </NextLink>
             </li>
           </ul>
