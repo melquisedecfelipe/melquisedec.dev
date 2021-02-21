@@ -7,7 +7,7 @@ export const AboutContainer = styled.div(
     padding: ${size(2)} 0;
 
     ${media.tablet(css`
-      padding: ${size(10)} ${size(5)};
+      padding: ${size(5)};
     `)}
 
     ${media.desktop(css`
@@ -22,7 +22,7 @@ export const Experience = styled.section(
     padding: ${size(2)};
 
     ${media.tablet(css`
-      padding: ${size(10)} 0;
+      padding: ${size(5)} 0;
     `)}
 
     > h4 {
@@ -74,7 +74,7 @@ export const Academic = styled.div(
     padding: ${size(2)};
 
     ${media.tablet(css`
-      padding: ${size(10)} 0;
+      padding: ${size(5)} 0;
     `)}
 
     > h4 {

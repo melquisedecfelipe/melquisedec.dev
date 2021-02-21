@@ -4,9 +4,8 @@ const black = '#1f1f1f'
 const wheel = {
   title: '#2f3542',
   text: '#57606f',
-  link: '#3742fa',
   gray: '#f1f2f6',
-  purple: '#8a05be'
+  primary: '#3742fa'
 }
 
 const code = {

@@ -6,7 +6,7 @@ export const NotFoundContainer = styled.div(
     padding: ${size(2)};
 
     ${media.tablet(css`
-      padding: ${size(10)} ${size(5)};
+      padding: ${size(5)};
     `)}
 
     ${media.desktop(css`

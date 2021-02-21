@@ -35,7 +35,7 @@ export const ContainerLoading = styled.div<ContainerProps>(
 
     &:before {
       content: '';
-      background: ${colors.wheel.purple};
+      background: ${colors.wheel.primary};
       display: block;
       height: 100%;
       animation: ${isLoading

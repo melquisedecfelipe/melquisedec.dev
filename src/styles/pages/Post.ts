@@ -13,7 +13,7 @@ export const MorePosts = styled.section(
       padding: ${size(5)} ${size(2)};
 
       ${media.tablet(css`
-        padding: ${size(10)} ${size(5)};
+        padding: ${size(5)};
       `)}
 
       ${media.desktop(css`
@@ -128,7 +128,7 @@ export const PostDetail = styled.section(
     padding: ${size(5)} ${size(2)};
 
     ${media.tablet(css`
-      padding: ${size(10)} ${size(5)};
+      padding: ${size(5)};
     `)}
 
     ${media.desktop(css`

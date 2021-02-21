@@ -56,7 +56,7 @@ const GlobalStyles = createGlobalStyle(
 
     a,
     button {
-      color: ${colors.wheel.link};
+      color: ${colors.wheel.primary};
       transition: all 0.25s;
       cursor: pointer;
 
