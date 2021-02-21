@@ -1,24 +1,24 @@
 <h1>
-    Refactor
+    melquisedec.dev
     <br>
 </h1>
 
 <p>
-  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/melquisedecfelipe/refactor.svg">
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/melquisedecfelipe/melquisedec.dev.svg">
 
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/melquisedecfelipe/refactor.svg">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/melquisedecfelipe/melquisedec.dev.svg">
 
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/melquisedecfelipe/refactor.svg">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/melquisedecfelipe/melquisedec.dev.svg">
 
-  <a href="https://github.com/melquisedecfelipe/refactor/commits/master">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/melquisedecfelipe/refactor.svg">
+  <a href="https://github.com/melquisedecfelipe/melquisedec.dev/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/melquisedecfelipe/melquisedec.dev.svg">
   </a>
 
-  <a href="https://github.com/melquisedecfelipe/refactor/issues">
-    <img alt="Repository issues" src="https://img.shields.io/github/issues/melquisedecfelipe/refactor.svg">
+  <a href="https://github.com/melquisedecfelipe/melquisedec.dev/issues">
+    <img alt="Repository issues" src="https://img.shields.io/github/issues/melquisedecfelipe/melquisedec.dev.svg">
   </a>
 
-  <img alt="GitHub" src="https://img.shields.io/github/license/melquisedecfelipe/refactor.svg">
+  <img alt="GitHub" src="https://img.shields.io/github/license/melquisedecfelipe/melquisedec.dev.svg">
 </p>
 
 <p>
@@ -43,10 +43,10 @@ To clone and run this application, you'll need [Git](https://git-scm.com), [Node
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/melquisedecfelipe/refactor
+$ git clone https://github.com/melquisedecfelipe/melquisedec.dev
 
 # Go into the repository and install dependencies
-$ cd refactor && yarn
+$ cd melquisedec.dev && yarn
 
 # Run backend
 $ yarn dev
@@ -54,7 +54,7 @@ $ yarn dev
 
 ## :memo: License
 
-This project is under the MIT license. See the [LICENSE](https://github.com/melquisedecfelipe/refactor/blob/master/LICENSE) for more information.
+This project is under the MIT license. See the [LICENSE](https://github.com/melquisedecfelipe/melquisedec.dev/blob/master/LICENSE) for more information.
 
 ---
 
