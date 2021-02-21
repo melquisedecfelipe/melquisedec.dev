@@ -122,7 +122,7 @@ export const PostArticle = styled.article(
 )
 
 export const PostDetail = styled.section(
-  ({ theme: { colors, media, size } }) => css`
+  ({ theme: { media, size } }) => css`
     width: 100%;
     padding: ${size(5)} ${size(2)};
 
