@@ -7,7 +7,7 @@ import { Post } from '@/types'
 import { dateFormated } from '@/utils/dateFormated'
 
 interface PostProps {
-  isSimple: boolean
+  isSimple?: boolean
   post: Post
 }
 

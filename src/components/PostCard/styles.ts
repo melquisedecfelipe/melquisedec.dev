@@ -18,7 +18,7 @@ export const PostCardContainer = styled.div(
 
     &:hover {
       > h4 {
-        color: ${colors.wheel.green};
+        color: ${colors.wheel.purple};
       }
     }
   `
@@ -47,11 +47,11 @@ export const PostCardSimpleContainer = styled.div(
 
     &:hover {
       > h4 {
-        color: ${colors.wheel.green};
+        color: ${colors.wheel.purple};
       }
 
       > hr {
-        border-color: ${colors.wheel.green};
+        border-color: ${colors.wheel.purple};
       }
     }
   `

@@ -6,7 +6,7 @@ const wheel = {
   text: '#57606f',
   link: '#3742fa',
   gray: '#f1f2f6',
-  green: '#2ed573'
+  purple: '#8a05be'
 }
 
 const code = {

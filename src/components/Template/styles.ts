@@ -23,7 +23,7 @@ export const About = styled.section(
 
     &::before {
       content: '01001111 01101100 11100001 00100000 01001101 01110101 01101110 01100100 01101111 00100001';
-      color: ${colors.wheel.green};
+      color: ${colors.wheel.purple};
       font-size: ${size(5)};
       font-family: 'JetBrains Mono', monospace;
       position: absolute;
@@ -66,6 +66,7 @@ export const Footer = styled.section(
     flex-direction: column;
     width: 100%;
     background: ${colors.black};
+    border-top: 2px solid ${colors.wheel.purple};
 
     > div {
       display: flex;
@@ -133,6 +134,7 @@ export const Hero = styled.div<HeroProps>(
     background-size: cover;
     background-position: center;
     position: relative;
+    border-bottom: 2px solid ${colors.wheel.purple};
 
     > h1 {
       text-align: center;
