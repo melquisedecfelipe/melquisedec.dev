@@ -48,7 +48,7 @@ $ git clone https://github.com/melquisedecfelipe/melquisedec.dev
 # Go into the repository and install dependencies
 $ cd melquisedec.dev && yarn
 
-# Run backend
+# Run
 $ yarn dev
 ```
 
