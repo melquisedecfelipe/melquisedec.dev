@@ -65,8 +65,12 @@ export const Project = styled.section(
 
     > div {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: 1fr;
       grid-gap: ${size(2)};
+
+      ${media.tablet(css`
+        grid-template-columns: repeat(2, 1fr);
+      `)}
     }
   `
 )
