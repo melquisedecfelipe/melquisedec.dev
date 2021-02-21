@@ -1,9 +1,9 @@
 import React from 'react'
 
-import { FilmProvider } from './film'
+import { PostProvider } from './posts'
 
 const AppProvider: React.FC = ({ children }) => (
-  <FilmProvider>{children}</FilmProvider>
+  <PostProvider>{children}</PostProvider>
 )
 
 export default AppProvider
