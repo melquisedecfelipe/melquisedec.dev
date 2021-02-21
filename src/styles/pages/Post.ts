@@ -135,10 +135,6 @@ export const PostDetail = styled.section(
       margin: 0 auto;
     `)}
 
-    > hr {
-      border: 1px solid ${colors.wheel.gray};
-    }
-
     > section {
       display: flex;
       flex-direction: column;

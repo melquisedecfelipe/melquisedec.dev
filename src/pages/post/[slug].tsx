@@ -113,8 +113,6 @@ export default function Post({ post, morePosts }: PostProps) {
             <ReadProgress height={articleRead + '%'} />
           </ReadContainer>
         </PostGrid>
-
-        <hr />
       </PostDetail>
 
       {morePosts.length > 0 && (
