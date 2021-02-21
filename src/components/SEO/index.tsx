@@ -16,7 +16,9 @@ export default function SEO({
   shouldExcludeTitleSuffix = false,
   shouldIndexPage = true
 }: SEOProps) {
-  const pageTitle = `${title} ${!shouldExcludeTitleSuffix ? '| Refactor' : ''}`
+  const pageTitle = `${title} ${
+    !shouldExcludeTitleSuffix ? '| melquisedec.dev' : ''
+  }`
 
   return (
     <Head>
@@ -30,8 +32,8 @@ export default function SEO({
       <meta httpEquiv="x-ua-compatible" content="IE=edge,chrome=1" />
       <meta name="MobileOptimized" content="320" />
       <meta name="HandheldFriendly" content="True" />
-      <meta name="theme-color" content="#05c46b" />
-      <meta name="msapplication-TileColor" content="#05c46b" />
+      <meta name="theme-color" content="#3742fa" />
+      <meta name="msapplication-TileColor" content="#3742fa" />
       <meta name="referrer" content="no-referrer-when-downgrade" />
       <meta name="google" content="notranslate" />
 
