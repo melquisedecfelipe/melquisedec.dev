@@ -1,7 +1,13 @@
-import React, { useMemo } from 'react'
+import React, { useCallback, useMemo } from 'react'
 import NextLink from 'next/link'
 
-import { FiInstagram, FiLinkedin, FiMail, FiTwitter } from 'react-icons/fi'
+import {
+  FiArrowUp,
+  FiGithub,
+  FiLinkedin,
+  FiMail,
+  FiTwitter
+} from 'react-icons/fi'
 
 import {
   About,
@@ -38,6 +44,12 @@ const Template: React.FC<TemplateProps> = ({
     }
   }, [post])
 
+  const goToTop = useCallback(() => {
+    if (window) {
+      window.scrollTo(0, 0)
+    }
+  }, [])
+
   return (
     <TemplateContainer>
       <Loading loading={loading} />
@@ -56,6 +68,11 @@ const Template: React.FC<TemplateProps> = ({
                 <a>Sobre</a>
               </NextLink>
             </li>
+            <li>
+              <NextLink href="/posts">
+                <a>Posts</a>
+              </NextLink>
+            </li>
           </ul>
         </Navbar>
 
@@ -70,6 +87,23 @@ const Template: React.FC<TemplateProps> = ({
           <About>
             <code>console.log(&#34;Hello Word&#34;)</code>
             <h1>Desenvolvedor FullStack</h1>
+            <ul>
+              <li>
+                <a href="https://github.com/melquisedecfelipe">
+                  <FiGithub />
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/melquisedecfelipe/">
+                  <FiLinkedin />
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/httpsmelqui">
+                  <FiTwitter />
+                </a>
+              </li>
+            </ul>
           </About>
         )}
       </Hero>
@@ -89,8 +123,8 @@ const Template: React.FC<TemplateProps> = ({
               <h4>Social</h4>
               <ul>
                 <li>
-                  <a href="https://www.instagram.com/httpsmelqui/">
-                    <FiInstagram />
+                  <a href="https://github.com/melquisedecfelipe">
+                    <FiGithub />
                   </a>
                 </li>
                 <li>
@@ -104,6 +138,11 @@ const Template: React.FC<TemplateProps> = ({
                   </a>
                 </li>
               </ul>
+            </div>
+            <div>
+              <button onClick={() => goToTop()}>
+                <FiArrowUp />
+              </button>
             </div>
           </section>
           <small>Melquisedec Felipe 2021 &#xa9; All rights reserved</small>

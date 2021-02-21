@@ -23,7 +23,7 @@ export const About = styled.section(
 
     &::before {
       content: '01001111 01101100 11100001 00100000 01001101 01110101 01101110 01100100 01101111 00100001';
-      color: ${colors.wheel.purple};
+      color: ${colors.wheel.primary};
       font-size: ${size(5)};
       font-family: 'JetBrains Mono', monospace;
       position: absolute;
@@ -57,6 +57,27 @@ export const About = styled.section(
       color: ${colors.white};
       width: 200px;
     }
+
+    > ul {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      padding-left: 0;
+      margin-top: ${size(2)};
+
+      > li {
+        margin-right: ${size(2)};
+
+        > a {
+          color: ${colors.white};
+
+          > svg {
+            width: 25px;
+            height: 25px;
+          }
+        }
+      }
+    }
   `
 )
 
@@ -66,7 +87,7 @@ export const Footer = styled.section(
     flex-direction: column;
     width: 100%;
     background: ${colors.black};
-    border-top: 2px solid ${colors.wheel.purple};
+    border-top: 2px solid ${colors.wheel.primary};
 
     > div {
       display: flex;
@@ -106,6 +127,21 @@ export const Footer = styled.section(
           }
         }
 
+        & button {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: none;
+          border-radius: 5px;
+          height: 40px;
+          width: 40px;
+          background: ${colors.white};
+
+          > svg {
+            color: ${colors.black};
+          }
+        }
+
         & ul {
           display: flex;
           align-items: center;
@@ -134,7 +170,7 @@ export const Hero = styled.div<HeroProps>(
     background-size: cover;
     background-position: center;
     position: relative;
-    border-bottom: 2px solid ${colors.wheel.purple};
+    border-bottom: 2px solid ${colors.wheel.primary};
 
     > h1 {
       text-align: center;
