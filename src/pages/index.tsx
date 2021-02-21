@@ -19,7 +19,7 @@ interface HomeProps {
   repositories: Repository[]
 }
 
-export default function Films({ posts, repositories }: HomeProps) {
+export default function Home({ posts, repositories }: HomeProps) {
   return (
     <Template loading={posts.length === 0}>
       <SEO title="Home" shouldExcludeTitleSuffix />
@@ -77,11 +77,11 @@ export default function Films({ posts, repositories }: HomeProps) {
 }
 
 export const getStaticProps: GetStaticProps<HomeProps> = async () => {
-  const response = await getPostsForHome()
+  const posts = await getPostsForHome()
   const repositories = await getRepositories()
 
   return {
-    props: { ...response, ...repositories },
+    props: { ...posts, ...repositories },
     revalidate: 60
   }
 }
