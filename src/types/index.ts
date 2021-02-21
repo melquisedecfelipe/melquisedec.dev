@@ -14,3 +14,10 @@ export interface Post {
   slug: string
   title: string
 }
+
+export interface Repository {
+  name: string
+  description: string
+  htmlUrl: string
+  updatedAt: string
+}
