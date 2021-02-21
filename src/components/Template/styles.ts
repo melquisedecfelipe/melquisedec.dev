@@ -29,13 +29,11 @@ export const About = styled.section(
       position: absolute;
       bottom: 0;
       text-align: right;
-      opacity: 0.5;
       padding: ${size(2)};
       z-index: -1;
 
       ${media.tablet(css`
         padding: ${size(5)};
-        opacity: 1;
       `)}
     }
 
