@@ -48,7 +48,9 @@ export default function Home({ posts, repositories }: HomeProps) {
           {posts.length === 0 ? (
             <h3>Carregando...</h3>
           ) : (
-            <ResponsiveMasonry columnsCountBreakPoints={{ 767: 2, 1023: 3 }}>
+            <ResponsiveMasonry
+              columnsCountBreakPoints={{ 320: 1, 767: 2, 1023: 3 }}
+            >
               <Masonry gutter="18px">
                 {posts.map((post: Post) => (
                   <PostCard key={post.slug} post={post} />
