@@ -2,12 +2,14 @@ import React, { useEffect, useRef, useState } from 'react'
 import ErrorPage from 'next/error'
 import ReactMarkdown from 'react-markdown'
 
+import { AiOutlineWhatsApp } from 'react-icons/ai'
 import { FiFacebook, FiLinkedin, FiTwitter } from 'react-icons/fi'
 
 import {
   FacebookShareButton,
   LinkedinShareButton,
-  TwitterShareButton
+  TwitterShareButton,
+  WhatsappShareButton
 } from 'react-share'
 
 import { useRouter } from 'next/router'
@@ -102,6 +104,11 @@ export default function Post({ post, morePosts }: PostProps) {
               >
                 <FiTwitter />
               </TwitterShareButton>
+              <WhatsappShareButton
+                url={`${process.env.SITE_URL}/post/${post.slug}`}
+              >
+                <AiOutlineWhatsApp />
+              </WhatsappShareButton>
             </SharedButtons>
 
             <hr />

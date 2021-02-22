@@ -206,7 +206,9 @@ export const SharedButtons = styled.aside(
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-left: ${size(2)};
+      width: 25px;
+      height: 25px;
+      margin-left: ${size(1)};
       color: ${colors.wheel.title} !important;
     }
   `
