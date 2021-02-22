@@ -20,7 +20,7 @@ const RepositoryCard: React.FC<RepositoryCardProps> = ({ repository }) => {
 
       <RepositoryCardFooter>
         <small>{dateFormated(repository.updatedAt, true)}</small>
-        <a href={repository.updatedAt}>Ver ➝</a>
+        <a href={repository.updatedAt}>Ver &#10141;</a>
       </RepositoryCardFooter>
     </RepositoryCardContainer>
   )
