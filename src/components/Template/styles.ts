@@ -243,7 +243,6 @@ export const PostInfo = styled.div(
 
     > h1 {
       color: ${colors.white};
-      text-align: center;
     }
 
     > span {
