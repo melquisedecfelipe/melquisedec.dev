@@ -24,7 +24,7 @@ export const About = styled.section(
     &::before {
       content: '01001111 01101100 11100001 00100000 01001101 01110101 01101110 01100100 01101111 00100001';
       color: ${colors.wheel.primary};
-      font-size: ${size(5)};
+      font-size: ${size(4)};
       font-family: 'JetBrains Mono', monospace;
       position: absolute;
       bottom: 0;
@@ -34,6 +34,7 @@ export const About = styled.section(
 
       ${media.tablet(css`
         padding: ${size(5)};
+        font-size: ${size(5)};
       `)}
     }
 
