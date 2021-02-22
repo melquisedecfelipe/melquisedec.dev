@@ -162,7 +162,7 @@ export const Hero = styled.div<HeroProps>(
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 700px;
+    height: 600px;
     background: linear-gradient(-30deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.6)),
       url(${image});
     background-size: cover;

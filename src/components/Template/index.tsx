@@ -56,7 +56,7 @@ const Template: React.FC<TemplateProps> = ({
 
       <Hero image={image}>
         <Navbar>
-          <h4>melquisedec.dev</h4>
+          <h4>melqui</h4>
           <ul>
             <li>
               <NextLink href="/">
