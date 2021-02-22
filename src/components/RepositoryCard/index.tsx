@@ -1,7 +1,7 @@
 import React from 'react'
 import { Emojione } from 'react-emoji-render'
 
-import { RepositoryCardContainer } from './styles'
+import { RepositoryCardContainer, RepositoryCardFooter } from './styles'
 
 import { Repository } from '@/types'
 import { dateFormated } from '@/utils/dateFormated'
@@ -16,11 +16,12 @@ const RepositoryCard: React.FC<RepositoryCardProps> = ({ repository }) => {
       <div>
         <h4>{repository.name}</h4>
         <Emojione text={repository.description} />
-        <div>
-          <small>{dateFormated(repository.updatedAt, true)}</small>
-          <a href={repository.updatedAt}>Ver ➝</a>
-        </div>
       </div>
+
+      <RepositoryCardFooter>
+        <small>{dateFormated(repository.updatedAt, true)}</small>
+        <a href={repository.updatedAt}>Ver ➝</a>
+      </RepositoryCardFooter>
     </RepositoryCardContainer>
   )
 }
