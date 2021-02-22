@@ -145,7 +145,7 @@ const Template: React.FC<TemplateProps> = ({
               </button>
             </div>
           </section>
-          <small>Melquisedec Felipe 2021 &#xa9; All rights reserved</small>
+          <small>melqui 2021 &#xa9; All rights reserved</small>
         </div>
       </Footer>
     </TemplateContainer>
