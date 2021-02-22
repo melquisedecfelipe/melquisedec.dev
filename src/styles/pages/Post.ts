@@ -46,6 +46,7 @@ export const PostArticle = styled.article(
     }
 
     & img {
+      width: 100%;
       margin-top: ${size(2)};
     }
 
