@@ -12,7 +12,7 @@
   "dependencies": {
     "axios": "^0.21.2",
     "cosmicjs": "^3.4.0",
-    "next": "9.5.4",
+    "next": "11.1.1",
     "next-images": "^1.4.1",
     "next-offline": "^5.0.3",
     "next-pwa": "^3.1.5",
