@@ -10,7 +10,7 @@
     "lint:fix": "eslint --fix --ext .ts,.tsx ."
   },
   "dependencies": {
-    "axios": "^0.21.2",
+    "axios": "^1.6.0",
     "cosmicjs": "^3.4.0",
     "next": "12.1.0",
     "next-images": "^1.4.1",
