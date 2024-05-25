@@ -3,7 +3,7 @@ import { EDUCATION } from '@/constants'
 export default function Education() {
   return (
     <div className="space-y-4 relative">
-      <p className="text-xl text-muted">Formation</p>
+      <p className="sr-only">Formation</p>
 
       {EDUCATION.map(education => (
         <div key={education.institution}>

@@ -1,17 +1,23 @@
+import Icon from '@/components/icon'
+import Link from '@/components/link'
 import ThemeToggle from '@/components/theme-toggle'
 
-import { ME } from '@/constants'
+import { CURRENT_COMPANY, ME, SOCIALS } from '@/constants'
 
 export default function Header() {
   return (
-    <div className="flex flex-col md:flex-row md:gap-2 md:items-baseline">
-      <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight">
-        {ME.title}
-      </h3>
+    <nav className="relative space-y-1">
+      <div className="flex gap-2 items-center">
+        <Icon />
+
+        <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight">
+          {ME.title}
+        </h3>
+
+        <ThemeToggle />
+      </div>
 
       <p className="text-sm text-muted-foreground">{ME.description}</p>
-
-      <ThemeToggle />
-    </div>
+    </nav>
   )
 }

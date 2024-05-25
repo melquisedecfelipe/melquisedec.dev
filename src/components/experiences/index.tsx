@@ -4,7 +4,7 @@ import { EXPERIENCES } from '@/constants'
 export default function Experiences() {
   return (
     <div className="space-y-4 relative">
-      <p className="text-xl text-muted">Professional Experiences</p>
+      <p className="sr-only">Professional Experiences</p>
 
       {EXPERIENCES.map(experience => (
         <div key={experience.url}>
