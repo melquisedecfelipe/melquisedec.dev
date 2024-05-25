@@ -11,8 +11,8 @@ import {
 
 export default function Home() {
   return (
-    <main className="max-w-[600px] m-auto p-4 lg:p-10 lg:py-20 min-h-screen flex flex-col justify-between">
-      <div className="relative w-full">
+    <main className="max-w-[600px] m-auto p-4 lg:p-10 lg:py-20 h-screen flex flex-col justify-between">
+      <div className="relative">
         <div className="flex flex-col md:flex-row md:gap-2 md:items-baseline">
           <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight">
             {ME.title}
