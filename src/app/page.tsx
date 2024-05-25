@@ -12,7 +12,7 @@ import {
 export default function Home() {
   return (
     <main className="max-w-[600px] m-auto p-4 lg:p-10 lg:py-20 md:h-screen flex flex-col justify-between relative">
-      <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl absolute z-0 opacity-5 text-muted-foreground dark:opacity-15 dark:text-muted top-4 left-4 max-w-[500px]">
+      <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl absolute z-0 opacity-5 text-muted-foreground top-4 left-4 max-w-[500px] select-none">
         01001111 01101100 11100001 00100000 01001101 01110101 01101110 01100100
         01101111 00100001
       </h1>
