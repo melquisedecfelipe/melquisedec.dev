@@ -1,10 +1,13 @@
 import type { Metadata } from 'next'
 import { JetBrains_Mono } from 'next/font/google'
+
 import './globals.css'
+
 import Container from '@/components/container'
-import { ME } from '@/constants'
 import { ThemeProvider } from '@/providers/theme-provider'
 import { Analytics } from '@vercel/analytics/react'
+
+import { ME } from '@/constants'
 
 const jetbrains = JetBrains_Mono({ subsets: ['latin'] })
 

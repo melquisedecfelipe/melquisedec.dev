@@ -1,6 +1,8 @@
-import { CURRENT_COMPANY } from '@/constants'
 import { expect, test } from 'vitest'
+
 import Link from '.'
+
+import { CURRENT_COMPANY } from '@/constants'
 
 test('should render correctly', () => {
   const render = <Link href={CURRENT_COMPANY.url}>{CURRENT_COMPANY.name}</Link>
