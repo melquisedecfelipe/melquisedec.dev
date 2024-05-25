@@ -11,7 +11,12 @@ import {
 
 export default function Home() {
   return (
-    <main className="max-w-[600px] m-auto p-4 lg:p-10 lg:py-20 h-screen flex flex-col justify-between">
+    <main className="max-w-[600px] m-auto p-4 lg:p-10 lg:py-20 md:h-screen flex flex-col justify-between relative">
+      <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl absolute z-0 opacity-5 text-muted-foreground dark:opacity-15 dark:text-muted top-4 left-4 max-w-[500px]">
+        01001111 01101100 11100001 00100000 01001101 01110101 01101110 01100100
+        01101111 00100001
+      </h1>
+
       <div className="relative">
         <div className="flex flex-col md:flex-row md:gap-2 md:items-baseline">
           <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight">
@@ -36,8 +41,8 @@ export default function Home() {
         </div>
       </div>
 
-      <div>
-        <div className="space-y-4 mt-10">
+      <div className="grid gap-10 mt-28">
+        <div className="space-y-4">
           {EXPERIENCES.map(experience => (
             <div key={experience.url}>
               <div className="flex flex-col gap-2 md:gap-4">
@@ -60,13 +65,14 @@ export default function Home() {
           ))}
         </div>
 
-        <div className="space-y-4 mt-10">
+        <div className="space-y-4">
           {EDUCATION.map(education => (
             <div key={education.institution}>
-              <p className="text-muted-foreground grid gap-1">
+              <p className="text-muted-foreground grid">
                 {education.institution}
                 <span className="text-primary">{education.course}</span>
               </p>
+
               <p className="text-sm text-muted-foreground">
                 {education.period}
               </p>
