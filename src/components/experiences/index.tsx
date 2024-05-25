@@ -10,9 +10,10 @@ export default function Experiences() {
       {EXPERIENCES.map(experience => (
         <div key={experience.url}>
           <div className="flex flex-col gap-2 md:gap-4">
-            <div className="flex-1">
-              <p className="flex gap-1">
+            <div>
+              <p className="flex gap-1 flex-wrap">
                 <span>{experience.role}</span>
+
                 {experience.url ? (
                   <Link href={experience.url}>{experience.company}</Link>
                 ) : (

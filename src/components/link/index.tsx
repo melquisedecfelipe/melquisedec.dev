@@ -20,6 +20,7 @@ export default function Link({ children, className, href }: LinkProps) {
       target="_blank"
     >
       {children}
+
       <ArrowUpRight className="size-4" />
     </NextLink>
   )
