@@ -1,5 +1,6 @@
+import Header from '@/components/header'
+import Icon from '@/components/icon'
 import Link from '@/components/link'
-import ThemeToggle from '@/components/theme-toggle'
 
 import {
   CURRENT_COMPANY,
@@ -11,21 +12,16 @@ import {
 
 export default function Home() {
   return (
-    <main className="max-w-[600px] m-auto p-4 lg:p-10 lg:py-20 md:h-screen flex flex-col justify-between relative">
+    <main className="max-w-[700px] m-auto p-4 lg:p-10 lg:py-20 md:h-screen flex flex-col justify-between relative">
       <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl absolute z-0 opacity-5 text-muted-foreground top-4 left-4 max-w-[500px] select-none">
         01001111 01101100 11100001 00100000 01001101 01110101 01101110 01100100
         01101111 00100001
       </h1>
 
-      <div className="relative">
-        <div className="flex flex-col md:flex-row md:gap-2 md:items-baseline">
-          <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight">
-            {ME.title}
-          </h3>
-
-          <p className="text-sm text-muted-foreground">{ME.description}</p>
-
-          <ThemeToggle />
+      <nav className="relative">
+        <div className="flex flex-col gap-2 md:flex-row md:gap-4 mb-1">
+          <Icon />
+          <Header />
         </div>
 
         <p className="leading-7 flex gap-1 items-center">
@@ -39,7 +35,7 @@ export default function Home() {
             </Link>
           ))}
         </div>
-      </div>
+      </nav>
 
       <div className="grid gap-10 mt-28">
         <div className="space-y-4">
