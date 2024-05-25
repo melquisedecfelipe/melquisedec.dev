@@ -12,8 +12,8 @@ interface RootLayoutProps {
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | melquisedec',
-    default: 'melquisedec.dev'
+    template: '%s | melqui',
+    default: 'melqui'
   },
   description:
     '01001111 01101100 11100001 00100000 01001101 01110101 01101110 01100100 01101111 00100001'
