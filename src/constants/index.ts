@@ -46,7 +46,9 @@ export const EXPERIENCES = [
 
 export const ME = {
   title: 'Melquisedec Felipe',
-  description: 'Better known as melqui'
+  description: 'Better known as melqui',
+  binary:
+    '01001111 01101100 11100001 00100000 01001101 01110101 01101110 01100100 01101111 00100001'
 }
 
 export const SOCIALS = [
