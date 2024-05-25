@@ -1,8 +1,6 @@
 import Icon from '@/components/icon'
-import Link from '@/components/link'
-import ThemeToggle from '@/components/theme-toggle'
 
-import { CURRENT_COMPANY, ME, SOCIALS } from '@/constants'
+import { ME } from '@/constants'
 
 export default function Header() {
   return (
@@ -13,8 +11,6 @@ export default function Header() {
         <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight">
           {ME.title}
         </h3>
-
-        <ThemeToggle />
       </div>
 
       <p className="text-sm text-muted-foreground">{ME.description}</p>
