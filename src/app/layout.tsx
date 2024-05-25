@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { JetBrains_Mono } from 'next/font/google'
 import './globals.css'
 import { ThemeProvider } from '@/providers/theme-provider'
-import { Analytics } from "@vercel/analytics/react"
+import { Analytics } from '@vercel/analytics/react'
 
-const inter = Inter({ subsets: ['latin'] })
+const jetbrains = JetBrains_Mono({ subsets: ['latin'] })
 
 interface RootLayoutProps {
   children: React.ReactNode
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={jetbrains.className}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
