@@ -6,7 +6,7 @@ export default function Header() {
     <nav>
       <Icon />
 
-      <div className="flex flex-col md:flex-row gap-1 items-baseline mt-2 md:mt-5 lg:mt-10">
+      <div className="flex flex-col md:flex-row gap-2 items-baseline mt-2">
         <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight">
           {ME.title}
         </h3>
@@ -14,7 +14,7 @@ export default function Header() {
         <p className="text-sm text-muted-foreground">{ME.description}</p>
       </div>
 
-      <p className="text-lg font-semibold">{CURRENT_COMPANY.role}</p>
+      <p className="hidden md:block text-lg font-semibold">{CURRENT_COMPANY.role}</p>
     </nav>
   )
 }

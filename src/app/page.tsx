@@ -8,7 +8,7 @@ export default function Home() {
     <div className="flex flex-col gap-5 justify-between h-full">
       <Header />
 
-      <div className="flex flex-col gap-10 divide-y divide-muted divide-dotted">
+      <div className="flex flex-col gap-5 md:gap-10 divide-y divide-muted divide-dotted">
         <Experiences />
         <Education />
         <Socials />

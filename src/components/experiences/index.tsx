@@ -10,7 +10,7 @@ export default function Experiences() {
 
       {EXPERIENCES.map(experience => (
         <div
-          className="grid md:grid-cols-[150px_1fr] gap-5"
+          className="grid md:grid-cols-[150px_1fr] gap-2 md:gap-5"
           key={experience.company}
         >
           <div className="flex gap-2 items-center">

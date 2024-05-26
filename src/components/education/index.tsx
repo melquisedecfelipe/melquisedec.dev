@@ -7,7 +7,7 @@ export default function Education() {
 
       {EDUCATION.map(education => (
         <div
-          className="grid md:grid-cols-[150px_1fr] gap-5"
+          className="grid md:grid-cols-[150px_1fr] gap-2 md:gap-5"
           key={education.institution}
         >
           <p className="text-sm text-muted-foreground">{education.period}</p>
