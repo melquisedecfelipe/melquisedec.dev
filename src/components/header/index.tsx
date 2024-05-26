@@ -6,7 +6,7 @@ export default function Header() {
     <nav>
       <Icon />
 
-      <div className="flex flex-col md:flex-row gap-2 items-baseline mt-2">
+      <div className="flex flex-col md:flex-row md:gap-2 items-baseline mt-2">
         <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight">
           {ME.title}
         </h3>
