@@ -2,17 +2,20 @@ import { EDUCATION } from '@/constants'
 
 export default function Education() {
   return (
-    <div className="space-y-4 relative">
+    <div className="grid gap-5 pt-5">
       <p className="sr-only">Formation</p>
 
       {EDUCATION.map(education => (
-        <div key={education.institution}>
-          <p className="text-muted-foreground grid">
-            {education.institution}
+        <div
+          className="grid md:grid-cols-[150px_1fr] gap-5"
+          key={education.institution}
+        >
+          <p className="text-sm text-muted-foreground">{education.period}</p>
+
+          <p className="text-muted-foreground">
+            {education.institution},{' '}
             <span className="text-primary">{education.course}</span>
           </p>
-
-          <p className="text-sm text-muted-foreground">{education.period}</p>
         </div>
       ))}
     </div>

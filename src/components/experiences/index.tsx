@@ -1,31 +1,32 @@
 import Link from '@/components/link'
+import { Badge } from '@/components/ui/badge'
 
 import { EXPERIENCES } from '@/constants'
 
 export default function Experiences() {
   return (
-    <div className="space-y-4 relative">
+    <div className="grid gap-5 pt-5">
       <p className="sr-only">Professional Experiences</p>
 
       {EXPERIENCES.map(experience => (
-        <div key={experience.url}>
-          <div className="flex flex-col gap-2 md:gap-4">
-            <div>
-              <p className="flex gap-1 flex-wrap">
-                <span>{experience.role}</span>
+        <div
+          className="grid md:grid-cols-[150px_1fr] gap-5"
+          key={experience.company}
+        >
+          <div className="flex gap-2 items-center">
+            <p className="text-sm text-muted-foreground">{experience.year}</p>
 
-                {experience.url ? (
-                  <Link href={experience.url}>{experience.company}</Link>
-                ) : (
-                  <span>{experience.company}</span>
-                )}
-              </p>
-
-              <p className="text-sm text-muted-foreground">
-                {experience.period}
-              </p>
-            </div>
+            {experience.present && (
+              <Badge className="rounded-full" variant="secondary">
+                Present
+              </Badge>
+            )}
           </div>
+
+          <p>
+            {experience.role}{' '}
+            <Link href={experience.url}>{experience.company}</Link>
+          </p>
         </div>
       ))}
     </div>
