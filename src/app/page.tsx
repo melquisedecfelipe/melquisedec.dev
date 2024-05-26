@@ -5,14 +5,14 @@ import Socials from '@/components/socials'
 
 export default function Home() {
   return (
-    <>
+    <div className="flex flex-col gap-5 justify-between h-full">
       <Header />
 
-      <div className="mt-28 grid gap-10">
+      <div className="flex flex-col gap-10 divide-y divide-muted divide-dotted">
         <Experiences />
         <Education />
         <Socials />
       </div>
-    </>
+    </div>
   )
 }
