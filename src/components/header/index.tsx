@@ -14,7 +14,9 @@ export default function Header() {
         <p className="text-sm text-muted-foreground">{ME.description}</p>
       </div>
 
-      <p className="hidden md:block text-lg font-semibold">{CURRENT_COMPANY.role}</p>
+      <p className="hidden md:block text-lg font-semibold">
+        {CURRENT_COMPANY.role}
+      </p>
     </nav>
   )
 }
