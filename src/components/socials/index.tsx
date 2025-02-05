@@ -6,7 +6,7 @@ import { ME, SOCIALS } from '@/constants'
 export default function Socials() {
   return (
     <div className="relative">
-      <p className="text-sm text-muted break-all hyphens-auto pt-4 absolute opacity-50 select-none max-w-[400px]">
+      <p className="hidden md:block text-sm text-muted break-all hyphens-auto pt-4 absolute opacity-50 select-none max-w-[400px]">
         {ME.binary}
       </p>
 
