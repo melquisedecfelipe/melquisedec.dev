@@ -1,8 +1,10 @@
 import { Analytics } from '@vercel/analytics/react'
 import type { Metadata } from 'next'
-import { JetBrains_Mono } from 'next/font/google'
+import { Inter } from 'next/font/google'
 
 import Container from '@/components/container'
+import CustomCursor from '@/components/custom-cursor'
+import FluidBackground from '@/components/fluid-background'
 
 import { ThemeProvider } from '@/providers/theme-provider'
 
@@ -10,7 +12,7 @@ import { ME } from '@/constants'
 
 import './globals.css'
 
-const font = JetBrains_Mono({ subsets: ['latin'] })
+const font = Inter({ subsets: ['latin'] })
 
 interface RootLayoutProps {
   children: React.ReactNode
@@ -34,6 +36,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
           enableSystem
           disableTransitionOnChange
         >
+          <CustomCursor />
+          <FluidBackground />
+
           <Container>
             {children}
 

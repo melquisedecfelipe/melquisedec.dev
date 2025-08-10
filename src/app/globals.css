@@ -73,5 +73,44 @@
 
   body {
     @apply bg-background text-foreground;
+    cursor: none;
+  }
+
+  /* Custom cursor styles */
+  .custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    background: #ffffff;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: -1;
+    transition: width 0.2s ease-out, height 0.2s ease-out;
+    will-change: transform;
+    opacity: 0.8;
+  }
+
+  /* Hover state */
+  .custom-cursor.hover {
+    width: 32px;
+    height: 32px;
+  }
+
+  /* Dark theme cursor */
+  .dark .custom-cursor {
+    background: #000000;
+  }
+
+  /* Hide cursor on mobile/touch devices */
+  @media (hover: none) and (pointer: coarse) {
+    body {
+      cursor: auto;
+    }
+    
+    .custom-cursor {
+      display: none;
+    }
   }
 }
